@@ -1,0 +1,27 @@
+# 빌드 결과물
+bin/
+obj/
+.vs/
+
+# 사용자 설정 파일
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# NuGet 패키지
+*.nupkg
+packages/
+
+# 환경파일
+*.env
+
+# 로그
+*.log
+
+# OS별 무시 항목
+.DS_Store
+Thumbs.db

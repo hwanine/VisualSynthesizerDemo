@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="VisualSynthesizerDemo.View.ControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VisualSynthesizerDemo.View"
+             xmlns:properties="clr-namespace:VisualSynthesizerDemo.Properties"
+             mc:Ignorable="d" >
+
+    <Grid>
+        <WrapPanel Orientation="Horizontal">
+            <Button Content="{x:Static properties:Resources.FileOpenButtonString}" Margin="5" Padding="5" Command="{Binding OpenVisualFileCommand}"/>
+            <Button Content="{x:Static properties:Resources.WebcamLoadButtonString}" Margin="5" Padding="5" Command="{Binding WebcamLoadCommand}"/>
+            <Button Content="{x:Static properties:Resources.WebcamStartButtonString}" Margin="5" Padding="5" Command="{Binding WebcamStartCommand}"/>
+            <Button Content="{x:Static properties:Resources.WebcamStopButtonString}" Margin="5" Padding="5" Command="{Binding WebcamStopCommand}"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{x:Static properties:Resources.WebcamStatusTitleString}" Margin="5" VerticalAlignment="Center" />
+                <TextBlock Text="{Binding WebcamStatus, Converter={StaticResource WebcamStatusConverter}}" Margin="0 5" VerticalAlignment="Center"/>
+            </StackPanel>
+        </WrapPanel>
+    </Grid>
+</UserControl>
