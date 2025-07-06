@@ -75,8 +75,8 @@ namespace VisualSynthesizerDemo.ViewModel
                 string filePath = dialog.FileName;
                 string ext = Path.GetExtension(filePath).ToLower();
 
-                string[] imageExts = { ".jpg", ".jpeg", ".png", ".bmp", ".gif" };
-                string[] videoExts = { ".mp4", ".avi", ".wmv", ".mov" };
+                string[] imageExts = { ".jpg", ".jpeg", ".png", ".bmp" };
+                string[] videoExts = { ".mp4", ".avi", ".wmv", ".mov", ".gif" };
 
                 if(MediaFileType == MediaType.CamVideo)
                 {

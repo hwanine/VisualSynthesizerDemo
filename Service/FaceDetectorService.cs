@@ -77,7 +77,6 @@ namespace VisualSynthesizerDemo.Service
             });
         }
 
-
         // Video 반복 처리
         public async Task VideoDetectNoseAsync(string videoPath)
         {
@@ -162,6 +161,7 @@ namespace VisualSynthesizerDemo.Service
             int newHeight = (int)(originalHeight * ratio);
             Cv2.Resize(frame, frame, new OpenCvSharp.Size(newWidth, newHeight));
         }
+
 
         public void StopDetection()
         {
