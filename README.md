@@ -19,28 +19,6 @@ VisualSynthesizerDemo는 DlibDotNet과 OpenCvSharp를 활용하여 이미지/비
 - 검출 결과 WPF UI에 실시간 시각화
 ---
 
-## 설치 및 실행 방법
-
-1. **필수 구성요소**
-   - .NET Framework 4.8 이상
-   - Visual Studio 2022 이상 (권장)
-   - Windows x64 환경
-
-2. **외부 모델 파일**
-   - `shape_predictor_68_face_landmarks.dat`  
-     (Dlib 얼굴 랜드마크 모델, [다운로드 링크](http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2))
-   - 프로젝트 실행 폴더에 복사 필요
-
-3. **NuGet 패키지 설치**
-   - OpenCvSharp4
-   - OpenCvSharp4.runtime.win
-   - DlibDotNet
-
-4. **빌드 및 실행**
-   - Visual Studio에서 솔루션 빌드 후 실행
-
----
-
 ## 사용법
 
 ### 실행 방법
