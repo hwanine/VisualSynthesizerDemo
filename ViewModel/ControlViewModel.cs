@@ -97,7 +97,7 @@ namespace VisualSynthesizerDemo.ViewModel
                 }
                 else if (Array.Exists(videoExts, e => e == ext))
                 {
-                    // 비디오 파일
+                    // 비디오 파일 + .gif
                     MediaFileType = MediaType.Video;
                     await _faceDetectorService.VideoDetectNoseAsync(filePath);
                 }

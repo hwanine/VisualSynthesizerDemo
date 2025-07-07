@@ -11,7 +11,8 @@ namespace VisualSynthesizerDemo.Service
 {
     public interface IFaceDetectorService
     {
-        Task<List<DetectorRectangle>> ImageDetectNoseAsync(string imagePath);
+        Task<List<DetectionRectangle>> ImageDetectNoseAsync(string imagePath);
+        List<DetectionRectangle> ImageDetectNose(string imagePath);
         Task VideoDetectNoseAsync(string videoPath);
         Task WebcamDetectNoseAsync(Mat frame);
         void StopDetection();

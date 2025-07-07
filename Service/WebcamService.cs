@@ -35,17 +35,15 @@ namespace VisualSynthesizerDemo.Service
 
             try
             {
-                Task.Run(() =>
+                Task.Run(async () =>
                 {
                     var frame = new Mat();
                     while (_capture.IsOpened() && !_cts.Token.IsCancellationRequested)
                     {
                         if (_capture.Read(frame) && !frame.Empty())
                         {
-                            //onFrame?.Invoke(frame.Clone());
-                            _faceDetectorService.WebcamDetectNoseAsync(frame);
+                            await _faceDetectorService.WebcamDetectNoseAsync(frame);
                         }
-                        Cv2.WaitKey(30); // 30ms 대기 (약 33fps)
                     }
                     frame.Dispose();
                 }, _cts.Token);

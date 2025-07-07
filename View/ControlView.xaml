@@ -6,7 +6,6 @@
              xmlns:local="clr-namespace:VisualSynthesizerDemo.View"
              xmlns:properties="clr-namespace:VisualSynthesizerDemo.Properties"
              mc:Ignorable="d" >
-
     <Grid>
         <WrapPanel Orientation="Horizontal">
             <Button Content="{x:Static properties:Resources.FileOpenButtonString}" Margin="5" Padding="5" Command="{Binding OpenVisualFileCommand}"/>

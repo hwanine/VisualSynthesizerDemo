@@ -26,7 +26,7 @@ namespace VisualSynthesizerDemo.Service
     public class OpenImageFileEventArgs : EventArgs
     {
         public ImageSource Image { get; set; }
-        public List<DetectorRectangle> NoseRects{ get; set; }
+        public List<DetectionRectangle> NoseRects{ get; set; }
     }
 
     public class OpenVideoFileEventArgs : EventArgs
@@ -37,7 +37,7 @@ namespace VisualSynthesizerDemo.Service
 
     public class FaceDectectionEventArgs: EventArgs
     {
-        public List<DetectorRectangle> DetectionRectList { get; set; }
+        public List<DetectionRectangle> DetectionRectList { get; set; }
         public string FrameImagePath { get; set; }
         public MediaType Type { get; set; }
     }

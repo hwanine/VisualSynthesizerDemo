@@ -20,7 +20,6 @@ namespace VisualSynthesizerDemo.ViewModel
     public class MediaViewModel : ViewModelBase, IMediaViewModel
     {
         private readonly INotificationService _notificationService;
-        private readonly IFaceDetectorService _faceDetectorService;
         private ImageSource _imageSource;
         private Uri _videoSource;
 
@@ -29,15 +28,13 @@ namespace VisualSynthesizerDemo.ViewModel
             get => _imageSource;
             set => Set(ref _imageSource, value);
         }
-        public ObservableCollection<DetectorRectangle> NoseRectangles { get; }
+        public ObservableCollection<DetectionRectangle> NoseRectangles { get; }
 
-        public MediaViewModel(INotificationService notificationService, IFaceDetectorService faceDetectorService)
+        public MediaViewModel(INotificationService notificationService)
         {
             _notificationService = notificationService;
-            _faceDetectorService = faceDetectorService;
-            NoseRectangles = new ObservableCollection<DetectorRectangle>();
+            NoseRectangles = new ObservableCollection<DetectionRectangle>();
             NotificationServiceSubscribes(notificationService);
-
         }
 
         private void NotificationServiceSubscribes(INotificationService notificationService)
@@ -79,7 +76,10 @@ namespace VisualSynthesizerDemo.ViewModel
                     {
                         System.IO.File.Delete(args.FrameImagePath);
                     }
-                    catch (Exception ex) { }                    
+                    catch (Exception ex) 
+                    { 
+                        Console.WriteLine($"임시 파일 삭제 실패: {ex.Message}");
+                    }                    
                 });
 
             };

@@ -14,6 +14,6 @@ namespace VisualSynthesizerDemo.ViewModel
     public interface IMediaViewModel
     {
         ImageSource ImageSource { get; set; }
-        ObservableCollection<DetectorRectangle> NoseRectangles { get; }
+        ObservableCollection<DetectionRectangle> NoseRectangles { get; }
     }
 }
