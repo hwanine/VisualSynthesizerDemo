@@ -29,6 +29,9 @@ namespace VisualSynthesizerDemo.Service
 
         public WebcamStatus StartWebcam()
         {
+            if (_cts != null && !_cts.IsCancellationRequested)
+                return WebcamStatus.Started;
+
             if (_capture == null || !_capture.IsOpened())
                 return WebcamStatus.NotLoaded;
             _cts = new CancellationTokenSource();
@@ -59,7 +62,6 @@ namespace VisualSynthesizerDemo.Service
 
         public WebcamStatus LoadWebcam()
         {
-            _cts = new CancellationTokenSource();
             _capture = new VideoCapture(0);
 
             if (!_capture.IsOpened())
