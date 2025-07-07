@@ -1,7 +1,7 @@
 # VisualSynthesizerDemo
 
 ## 개요
-VisualSynthesizerDemo는 DlibDotNet과 OpenCvSharp를 활용하여 이미지/비디오/웹캠에서 얼굴 및 코 영역을 실시간으로 검출하고, WPF UI에 시각적으로 표시하는 데모 애플리케이션.
+VisualSynthesizerDemo는 DlibDotNet과 OpenCvSharp를 활용하여 이미지/비디오/웹캠에서 얼굴 및 코 영역을 실시간으로 검출하고, WPF UI에 시각적으로 루돌프 코 형태로 표시하는 데모 프로그램.
 
 ---
 
@@ -26,7 +26,7 @@ VisualSynthesizerDemo는 DlibDotNet과 OpenCvSharp를 활용하여 이미지/비
 - 빌드 패키지 실행
    - Release_Demo 폴더 내 VisualSynthesizerDemo.exe 파일 실행
 
-- 직접 빌드 후 실행 or 빌드 패키지 실행
+- 직접 빌드 후 실행
    - Visual Studio에서 솔루션 로드 후 빌드 및 실행(Release/Debug x64)
    
 
@@ -46,7 +46,7 @@ VisualSynthesizerDemo는 DlibDotNet과 OpenCvSharp를 활용하여 이미지/비
    - 실시간 웹캠 영상에서 코 영역 검출
    - "Webcam Stop" 버튼으로 중단
 
-5. **UI**
-   - 검출된 코 영역은 빨간색 입체 원으로 표시됨
+4. **UI**
+   - 검출된 코 영역은 빨간색 원으로(루돌프 코 형태) 표시됨
 
 ---
