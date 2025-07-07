@@ -136,7 +136,7 @@
     <Compile Include="Converter\VideoVisibilityConverter.cs" />
     <Compile Include="Converter\WebcamStatusConverter.cs" />
     <Compile Include="Model\Common.cs" />
-    <Compile Include="Model\DetectorRectangle.cs" />
+    <Compile Include="Model\DetectionRectangle.cs" />
     <Compile Include="Service\FaceDetectorService.cs" />
     <Compile Include="Service\IFaceDetectorService.cs" />
     <Compile Include="Service\INotificationService.cs" />
